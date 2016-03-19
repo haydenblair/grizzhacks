@@ -1,0 +1,35 @@
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+img.right {
+    float: right;
+}
+
+#main-img {
+    margin-top: -300px;
+}
+
+#main-img img {
+    width: 250px;
+}
+
+.tall {
+    height: 500px;
+}
+
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
