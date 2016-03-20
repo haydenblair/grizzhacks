@@ -64,6 +64,13 @@
     }
 }
 
+- (IBAction)postButton:(id)sender {
+    NSURL *instagramURL = [NSURL URLWithString:@"instagram://camera"];
+    if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
+        [[UIApplication sharedApplication] openURL:instagramURL];
+    }
+}
+
 - (void)recognizeImage:(UIImage *)image {
     // Scale down the image. This step is optional. However, sending large images over the
     // network is slow and does not significantly improve recognition performance.
@@ -83,8 +90,9 @@
             NSLog(@"Error: %@", error);
             self.textView.text = @"Sorry, there was an error recognizing the image.";
         } else {
+           
             ClarifaiResult *result = results.firstObject;
-            self.textView.text = [NSString stringWithFormat:@"Tags:\n%@", [result.tags componentsJoinedByString:@", "]];
+            self.textView.text = [NSString stringWithFormat:@"Tags:\n%@", [result.tags componentsJoinedByString:@" #"]];
         }
         self.button.enabled = YES;
     }];

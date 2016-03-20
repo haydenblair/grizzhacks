@@ -41,21 +41,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n8-gh-9H1">
-                                <rect key="frame" x="137" y="409" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-c5-bEd">
+                                <rect key="frame" x="131" y="412" width="60" height="34"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Post it">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="addButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zOe-Xf-Ll2"/>
+                                    <action selector="postButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wZ1-12-J1m"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXC-Eb-XRj">
-                                <rect key="frame" x="112" y="388" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="tXC-Eb-XRj" secondAttribute="height" multiplier="97:30" id="laH-ro-CkL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -63,21 +58,19 @@
                             <constraint firstItem="7P2-fU-VA6" firstAttribute="top" secondItem="wTd-07-eJf" secondAttribute="bottom" constant="8" id="7Gn-Va-yxR"/>
                             <constraint firstItem="7P2-fU-VA6" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="DrQ-RN-a79"/>
                             <constraint firstItem="7P2-fU-VA6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="HqO-0z-CNn"/>
-                            <constraint firstItem="tXC-Eb-XRj" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="163" id="NCA-5c-RIa"/>
                             <constraint firstItem="wTd-07-eJf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="Orv-UE-vuh"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dCz-LP-z0k" secondAttribute="bottom" constant="20" id="X7N-mr-7ps"/>
                             <constraint firstItem="dCz-LP-z0k" firstAttribute="top" secondItem="7P2-fU-VA6" secondAttribute="bottom" constant="8" id="af3-oP-8nt"/>
                             <constraint firstAttribute="centerX" secondItem="dCz-LP-z0k" secondAttribute="centerX" id="cF7-91-jJS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wTd-07-eJf" secondAttribute="trailing" constant="-20" id="fHW-zk-TUW"/>
-                            <constraint firstItem="tXC-Eb-XRj" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uTq-RT-PwA"/>
+                            <constraint firstItem="BXK-c5-bEd" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="189" id="szs-Ah-uww"/>
+                            <constraint firstItem="BXK-c5-bEd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uXm-tH-Hnj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Clarifai" id="TsC-O3-KyC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="addButton" destination="5n8-gh-9H1" id="rJx-G7-dB3"/>
                         <outlet property="button" destination="dCz-LP-z0k" id="Pln-eq-Il0"/>
-                        <outlet property="captionField" destination="tXC-Eb-XRj" id="Zfv-v3-bXX"/>
                         <outlet property="imageView" destination="wTd-07-eJf" id="cQg-p1-dJJ"/>
                         <outlet property="textView" destination="7P2-fU-VA6" id="nKH-St-Wvt"/>
                     </connections>
