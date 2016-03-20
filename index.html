@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>The App for Instagram</title>
+    <title>QuikCaption</title>
     <link rel="icon" href="img/web_icon.png"/>
 
     <!-- Google Icons -->
@@ -18,7 +18,7 @@
     <main>
         <div class="section tall">
             <div class="container">
-                <h1 class="header center white-text">The App for Instagram</h1>
+                <h1 class="header center white-text">QuikCaption</h1>
             </div>
         </div>
 
@@ -29,19 +29,19 @@
                 </div>
                 <div class="col s6">
                     <a href="#">
-                        <img class="responsive-img" style="margin-top: 100px" src="img/app_store.svg"/>
+                        <img class="responsive-img tooltipped" data-position="right" data-delay="50" data-tooltip="Coming Soon" style="margin-top: 100px" src="img/app_store.svg"/>
                     </a>
                     <br>
                     <a href="#">
-                        <img class="responsive-img" src="img/google_play.png"/>
+                        <img class="responsive-img tooltipped" data-position="right" data-delay="50" data-tooltip="Coming Soon" src="img/google_play.png"/>
                     </a>
 
                     <div style="padding-top: 30px" class="white-text">
                         <h4>
-                            Tired of typing in tags for Instagram?
+                            Tired of typing in tags for Social Media?
                         </h4>
                         <h4>
-                            Our app automatically generates them for you based on your picture!
+                            QuikCaption automatically generates them for you based on your picture!
                         </h4>
                     </div>
                 </div>
@@ -69,8 +69,8 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">The App for Instagram</h5>
-                    <p>Why type your tags for Instagram when you can use this app to analyze your picture and suggest some tags.</p>
+                    <h5 class="white-text">QuikCaption</h5>
+                    <p>Why type your tags for your Social Media when you can use this app to analyze your picture and suggest some tags.</p>
                 </div>
             </div>
         </div>
@@ -87,6 +87,8 @@
 
     <script type="text/javascript">
         $(function() {
+            $('.tooltipped').tooltip({delay: 50});
+
             setInterval(function(){
                 var ios_img = "img/ios_main.png",
                     android_img = "img/android_main.png";
