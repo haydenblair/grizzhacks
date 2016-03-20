@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:textColor="@android:color/white"
-                    android:text="@string/open_in_ig"
+                    android:text="@string/open_in_sm"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
