@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0A507BCDF462621C34F0BB3B'
-               BlueprintName = 'Pods-ClarifaiApiDemo'
+               BlueprintIdentifier = '2ED47564AEF209A2E17518A2'
+               BlueprintName = 'DMActivityInstagram'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-ClarifaiApiDemo.a'>
+               BuildableName = 'libDMActivityInstagram.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -6,6 +6,7 @@
 #import "RecognitionViewController.h"
 #import "ClarifaiApiDemo-Swift.h"
 #import "ClarifaiClient.h"
+#import "DMActivityInstagram.h"
 
 
 /**
@@ -50,7 +51,7 @@
 
 
 - (IBAction)addButtonPressed:(id)sender {
-    
+     
     
     self.captionField.text = @"grizz";
 }
@@ -72,8 +73,13 @@
 }
 
 - (IBAction)postButton:(id)sender {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = self.textView.text;
+    DMActivityInstagram *instagramActivity = [[DMActivityInstagram alloc] init];
+    NSString *shareText = self.textView.text;
+    NSURL *shareURL = [NSURL URLWithString:@"instagram://app"];
+    
+    NSArray *activityItems = @[self.imageView.image, shareText, shareURL];
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:@[instagramActivity]];
+    [self presentViewController:activityController animated:YES completion:nil];
     }
 
 
@@ -98,7 +104,14 @@
         } else {
            
             ClarifaiResult *result = results.firstObject;
-            self.textView.text = [NSString stringWithFormat:@"Tags:\n%@", [result.tags componentsJoinedByString:@" #"]];
+            
+            self.textView.text = [NSString stringWithFormat:@"%@", [result.tags componentsJoinedByString:@" #"]];
+            NSString* a = self.textView.text;
+            NSString* b = @"#";
+            NSString* final = [b stringByAppendingString:a];
+            self.textView.text = final;
+            
+            
         }
         self.button.enabled = YES;
     }];
