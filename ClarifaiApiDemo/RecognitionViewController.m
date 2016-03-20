@@ -107,7 +107,7 @@
 - (IBAction)postButton:(id)sender {
     DMActivityInstagram *instagramActivity = [[DMActivityInstagram alloc] init];
     NSString *shareText = self.textView.text;
-    NSURL *shareURL = [NSURL URLWithString:@""];
+    NSURL *shareURL = [NSURL URLWithString:@"#DevelopTheFuture"];
     
     NSArray *activityItems = @[self.imageView.image, shareText, shareURL];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:@[instagramActivity]];
