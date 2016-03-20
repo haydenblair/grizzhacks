@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UIButton *takePic;
+@property (weak, nonatomic) IBOutlet UIButton *returnButton;
 @property (strong, nonatomic) ClarifaiClient *client;
 @end
 
@@ -32,16 +34,44 @@
     return _client;
 }
 
+- (IBAction)takePic:(id)sender {
+    
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+        
+    
+
+    
+}
+
 - (void)viewDidLoad {
-    self.addButton.hidden = YES;
     [super viewDidLoad];
+    _addButton.hidden = YES;
+    _returnButton.hidden = YES;
     
     // Do any additional setup after loading the view.
+}
+
+
+- (IBAction)returnButtonPressed:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.allowsEditing = NO;
+    picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:nil];
+    
+    
 }
 - (IBAction)buttonPressed:(id)sender {
     // Show a UIImagePickerController to let the user pick an image from their library.
     self.button.hidden = YES;
+    self.takePic.hidden = YES;
     self.addButton.hidden = NO;
+    self.returnButton.hidden = NO;
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     picker.allowsEditing = NO;
@@ -75,7 +105,7 @@
 - (IBAction)postButton:(id)sender {
     DMActivityInstagram *instagramActivity = [[DMActivityInstagram alloc] init];
     NSString *shareText = self.textView.text;
-    NSURL *shareURL = [NSURL URLWithString:@"instagram://app"];
+    NSURL *shareURL = [NSURL URLWithString:@""];
     
     NSArray *activityItems = @[self.imageView.image, shareText, shareURL];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:@[instagramActivity]];
