@@ -87,22 +87,18 @@
 
     <script type="text/javascript">
         $(function() {
-            var ios_set = false;
-
             setInterval(function(){
                 var ios_img = "img/ios_main.png",
                     android_img = "img/android_main.png";
 
-                if (!ios_set) {
-                    $("#show").animate({
+                if ($("#show").attr("src") === android_img) {
+                    $("#show").attr({
                         src: ios_img
-                    }, 400, 'linear');
-                    ios_set = true;
+                    });
                 } else {
                     $("#show").attr({
                         src: android_img
-                    }, 400, 'linear');
-                    ios_set = false;
+                    });
                 }
             }, 5000);
         });
