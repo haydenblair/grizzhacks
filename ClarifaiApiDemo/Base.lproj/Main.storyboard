@@ -46,11 +46,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-07-eJf">
                                 <rect key="frame" x="-4" y="0.0" width="418" height="418"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-03-20 at 10.08.46 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="dvm-uk-cTc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyb-lv-zhC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
-                                <color key="backgroundColor" red="0.21568627450980393" green="0.93333333333333335" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                <state key="normal" title="Take a Picture">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,10 +62,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCz-LP-z0k">
-                                <rect key="frame" x="0.0" y="370" width="414" height="366"/>
-                                <color key="backgroundColor" red="0.56078431370000004" green="0.3294117647" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="-2" y="421" width="414" height="366"/>
                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                <state key="normal" title="Select an Image">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -78,6 +79,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="addButton" destination="BXK-c5-bEd" id="UnS-Z9-h7i"/>
+                        <outlet property="bg" destination="dvm-uk-cTc" id="9vn-qH-ncL"/>
                         <outlet property="button" destination="dCz-LP-z0k" id="Pln-eq-Il0"/>
                         <outlet property="imageView" destination="wTd-07-eJf" id="cQg-p1-dJJ"/>
                         <outlet property="returnButton" destination="Are-oM-8Xt" id="uZm-7X-5Hh"/>
@@ -90,4 +92,7 @@
             <point key="canvasLocation" x="541" y="-371"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2016-03-20 at 10.08.46 AM.png" width="339" height="603"/>
+    </resources>
 </document>

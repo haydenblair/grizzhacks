@@ -17,6 +17,7 @@
 		408D39691BACA1FA00C5608B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408D39671BACA1FA00C5608B /* LaunchScreen.xib */; };
 		408D39751BACA1FA00C5608B /* ClarifaiApiDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 408D39741BACA1FA00C5608B /* ClarifaiApiDemoTests.m */; };
 		85A8549BF1D35E1606A5BC2C /* libPods-ClarifaiApiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3908FCAEDB4ED9DE2B4BCF4 /* libPods-ClarifaiApiDemo.a */; };
+		E133BAC61C9EE69500118B01 /* Screen Shot 2016-03-20 at 10.08.46 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = E133BAC51C9EE69500118B01 /* Screen Shot 2016-03-20 at 10.08.46 AM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		408D39731BACA1FA00C5608B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408D39741BACA1FA00C5608B /* ClarifaiApiDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClarifaiApiDemoTests.m; sourceTree = "<group>"; };
 		D3908FCAEDB4ED9DE2B4BCF4 /* libPods-ClarifaiApiDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClarifaiApiDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E133BAC51C9EE69500118B01 /* Screen Shot 2016-03-20 at 10.08.46 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-03-20 at 10.08.46 AM.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		408D39581BACA1FA00C5608B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E133BAC51C9EE69500118B01 /* Screen Shot 2016-03-20 at 10.08.46 AM.png */,
 				408D39591BACA1FA00C5608B /* Info.plist */,
 				408D395A1BACA1FA00C5608B /* main.m */,
 			);
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E133BAC61C9EE69500118B01 /* Screen Shot 2016-03-20 at 10.08.46 AM.png in Resources */,
 				408D39641BACA1FA00C5608B /* Main.storyboard in Resources */,
 				408D39691BACA1FA00C5608B /* LaunchScreen.xib in Resources */,
 				408D39661BACA1FA00C5608B /* Images.xcassets in Resources */,

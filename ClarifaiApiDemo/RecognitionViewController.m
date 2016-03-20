@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *captionField;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIImageView *bg;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UIButton *takePic;
 @property (weak, nonatomic) IBOutlet UIButton *returnButton;
@@ -68,6 +69,7 @@
 }
 - (IBAction)buttonPressed:(id)sender {
     // Show a UIImagePickerController to let the user pick an image from their library.
+    self.bg.hidden = YES;
     self.button.hidden = YES;
     self.takePic.hidden = YES;
     self.addButton.hidden = NO;
