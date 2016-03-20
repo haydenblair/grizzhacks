@@ -31,9 +31,16 @@
     return _client;
 }
 
-
+- (void)viewDidLoad {
+    self.addButton.hidden = YES;
+    [super viewDidLoad];
+    
+    // Do any additional setup after loading the view.
+}
 - (IBAction)buttonPressed:(id)sender {
     // Show a UIImagePickerController to let the user pick an image from their library.
+    self.button.hidden = YES;
+    self.addButton.hidden = NO;
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     picker.allowsEditing = NO;
@@ -65,11 +72,10 @@
 }
 
 - (IBAction)postButton:(id)sender {
-    NSURL *instagramURL = [NSURL URLWithString:@"instagram://camera"];
-    if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
-        [[UIApplication sharedApplication] openURL:instagramURL];
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = self.textView.text;
     }
-}
+
 
 - (void)recognizeImage:(UIImage *)image {
     // Scale down the image. This step is optional. However, sending large images over the
