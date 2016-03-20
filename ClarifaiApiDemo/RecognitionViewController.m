@@ -135,7 +135,7 @@
            
             ClarifaiResult *result = results.firstObject;
             
-            self.textView.text = [NSString stringWithFormat:@"%@", [result.tags componentsJoinedByString:@" #"]];
+            self.textView.text = [NSString stringWithFormat:@"%@", [result.tags componentsJoinedByString:@"    #"]];
             NSString* a = self.textView.text;
             NSString* b = @"#";
             NSString* final = [b stringByAppendingString:a];
