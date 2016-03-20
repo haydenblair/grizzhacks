@@ -18,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-fU-VA6">
-                                <rect key="frame" x="63" y="440" width="288" height="82"/>
+                                <rect key="frame" x="63" y="440" width="288" height="159"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Are-oM-8Xt">
-                                <rect key="frame" x="139" y="656" width="136" height="30"/>
+                                <rect key="frame" x="139" y="686" width="136" height="30"/>
                                 <state key="normal" title="Select a New Image"/>
                                 <connections>
                                     <action selector="returnButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p4U-my-Oei"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-c5-bEd">
-                                <rect key="frame" x="-2" y="547" width="418" height="54"/>
+                                <rect key="frame" x="-2" y="624" width="418" height="54"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
@@ -46,18 +46,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-07-eJf">
                                 <rect key="frame" x="-4" y="0.0" width="418" height="418"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCz-LP-z0k">
-                                <rect key="frame" x="0.0" y="370" width="414" height="366"/>
-                                <color key="backgroundColor" red="0.56078431370000004" green="0.3294117647" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                <state key="normal" title="Select an Image">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4qv-Ae-TDy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyb-lv-zhC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.93333333333333335" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,6 +57,18 @@
                                 <connections>
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mTh-iJ-pha"/>
                                     <action selector="takePic:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Hp-gi-D7l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCz-LP-z0k">
+                                <rect key="frame" x="0.0" y="370" width="414" height="366"/>
+                                <color key="backgroundColor" red="0.56078431370000004" green="0.3294117647" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Select an Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4qv-Ae-TDy"/>
                                 </connections>
                             </button>
                         </subviews>
