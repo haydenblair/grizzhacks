@@ -181,7 +181,6 @@ public class RecognitionFragment extends Fragment {
             if (requestCode == CODE_PICK) {
                 toggleScreenState();
 
-                Log.d(TAG, "User picked image: " + data.getData());
                 Bitmap bitmap = loadBitmapFromUri(data.getData());
                 mPhotoFileUri = data.getData();
 
@@ -204,7 +203,6 @@ public class RecognitionFragment extends Fragment {
                 }
             } else if (requestCode == CODE_TAKE) {
                 toggleScreenState();
-                Log.d(TAG, "Photo: " + data.getData());
 
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getApplicationContext().getContentResolver(), mPhotoFileUri);
