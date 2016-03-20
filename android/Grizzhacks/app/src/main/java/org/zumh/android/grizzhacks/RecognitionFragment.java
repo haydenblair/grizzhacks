@@ -140,14 +140,14 @@ public class RecognitionFragment extends Fragment {
 
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType(FILE_TYPE);
-                share.setPackage("com.instagram.android");
 
                 share.putExtra(Intent.EXTRA_STREAM, mPhotoFileUri);
+                share.putExtra(Intent.EXTRA_TEXT, b.toString());
 
                 if (share.resolveActivity(getActivity().getPackageManager()) != null) {
-                    startActivity(share);
+                    startActivity(Intent.createChooser(share, getString(R.string.send_txt)));
                 } else {
-                    Toast.makeText(getActivity(), R.string.install_ig, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), R.string.no_apps, Toast.LENGTH_SHORT).show();
                 }
             }
         });
