@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>The App for Instagram</title>
+    <link rel="icon" href="img/web_icon.png"/>
 
     <!-- Google Icons -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,14 +25,18 @@
         <div class="container" id="main-img">
             <div class="row">
                 <div class="col s6">
-                    <img class="responsive-img right" src="img/main_screen.png" />
+                    <img id="show" class="responsive-img right" src="img/main_screen.png" />
                 </div>
                 <div class="col s6">
                     <a href="#">
                         <img class="responsive-img" style="margin-top: 100px" src="img/app_store.svg"/>
                     </a>
+                    <br>
+                    <a href="#">
+                        <img class="responsive-img" src="img/google_play.png"/>
+                    </a>
 
-                    <div style="padding-top: 110px" class="white-text">
+                    <div style="padding-top: 80px" class="white-text">
                         <h4>
                             Tired of typing in tags for Instagram?
                         </h4>
@@ -47,9 +52,14 @@
             <div class="container">
                 <h2 class="white-text center">Screenshots</h2>
                 <div class="row">
-                    <div class="col s4"><img class="responsive-img" src="img/main_screen.png"/></div>
-                    <div class="col s4"><img class="responsive-img" src="img/main_screen.png"/></div>
-                    <div class="col s4"><img class="responsive-img" src="img/main_screen.png"/></div>
+                    <div class="col s4"><img class="responsive-img" src="img/android_01.png"/></div>
+                    <div class="col s4"><img class="responsive-img" src="img/android_02.png"/></div>
+                    <div class="col s4"><img class="responsive-img" src="img/android_03.png"/></div>
+                </div>
+                <div class="row">
+                    <div class="col s4"><img class="responsive-img" src="img/main_screen.png"></div>
+                    <div class="col s4"><img class="responsive-img" src="img/main_screen.png"></div>
+                    <div class="col s4"><img class="responsive-img" src="img/main_screen.png"></div>
                 </div>
             </div>
         </div>
@@ -66,7 +76,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                &copy; 2016 - GrizzHacks 2016 - Created by Hayden &amp; Elijah
+                &copy; 2016 - GrizzHacks 2016 - Created by <a class="white-text" href="http://haydenblair.com">Hayden</a> &amp; <a class="white-text" href="http://elijahwilson.me">Elijah</a>
             </div>
         </div>
     </footer>
@@ -74,5 +84,28 @@
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            var ios_set = false;
+
+            setInterval(function(){
+                var ios_img = "img/ios_main.png",
+                    android_img = "img/android_main.png";
+
+                if (!ios_set) {
+                    $("#show").animate({
+                        src: ios_img
+                    }, 400, 'linear');
+                    ios_set = true;
+                } else {
+                    $("#show").attr({
+                        src: android_img
+                    }, 400, 'linear');
+                    ios_set = false;
+                }
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
