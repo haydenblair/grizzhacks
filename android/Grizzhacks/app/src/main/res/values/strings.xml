@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">QuikCaption</string>
+    <string name="action_settings">Settings</string>
+    <string name="select_picture">Select Picture From Gallery</string>
+    <string name="take_pic">Take New Picture</string>
+    <string name="choose_diff_pic">Choose different picture</string>
+    <string name="open_in_sm">Copy Tags &amp; Open In Social Media</string>
+    <string name="tag_header">Select tags</string>
+    <string name="send_txt">Send Tags &amp; Image To:</string>
+
+    <!-- Error text -->
+    <string name="error_recognizing_img">Sorry, there was an error recognizing your image.</string>
+    <string name="error_processing_img">Sorry, there was an error processing your image.</string>
+    <string name="error_loading_img">Sorry, there was an error loading your image.</string>
+    <string name="error_creating_file">Sorry, there was an error creating your file.</string>
+    <string name="install_ig">Please install Instagram.</string>
+    <string name="no_apps">Unable to send tags and picture to another app.</string>
+</resources>
